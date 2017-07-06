@@ -2,16 +2,31 @@ import _ from 'lodash';
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import urlencode from 'urlencode';
-import socket from 'socket.io';
+import io from 'socket.io-client';
 
-import { fetchTweets, updateLocation } from '../actions';
+import { fetchTweets, addTweet, updateLocation } from '../actions';
 import TweetItem from './tweet_item';
 
 class TweetList extends Component {
   componentDidMount() {
+    const that = this;
     this.props.updateLocation(this.props.location);
     const baseTerm = urlencode(this.props.term);
-    this.props.fetchTweets(baseTerm, this.props.location);
+    let socket;
+
+    if (!socket) {
+      socket = io();
+    }
+
+    socket.emit('term', {
+      term: baseTerm,
+      lat: this.props.location.latitude,
+      lng: this.props.location.longitude
+    });
+
+    socket.on('tweet', (tweet) => {
+      this.props.addTweet(tweet);
+    });
   }
 
   renderTweets() {
@@ -38,4 +53,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { fetchTweets, updateLocation })(TweetList);
+export default connect(mapStateToProps, { fetchTweets, addTweet, updateLocation })(TweetList);

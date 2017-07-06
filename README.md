@@ -1,4 +1,4 @@
-# Debut Exercise
+# React Twitter
 
 ### Gulp tasks
 

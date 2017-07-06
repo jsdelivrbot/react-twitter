@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import urlencode from 'urlencode';
+import io from 'socket.io-client';
 
 import {fetchTweets, updateTerm} from './../actions';
 
@@ -16,7 +17,18 @@ class SearchBar extends Component {
   componentDidMount() {
     this.fetchTweets = _.debounce((term) => {
       const encodedTerm = urlencode(term);
-      this.props.fetchTweets(encodedTerm, this.props.location);
+
+      let socket;
+
+      if (!socket) {
+        socket = io();
+      }
+
+      socket.emit('term', {
+        term: encodedTerm,
+        lat: this.props.location.latitude,
+        lng: this.props.location.longitude
+      });
     }, 300);
   }
 
