@@ -1,0 +1,24 @@
+.metadata {
+  margin: -3px 0 5px 26px;
+  
+  .retweet-img {
+    background: #77b255;
+    border-radius: 2px;
+    fill: $white;
+    vertical-align: middle;
+    width: 15px;
+    height: 14px;
+  }
+
+  .retweet-text {
+    color: #8899a6;
+    font-size: 13px;
+    margin-left: 8px;
+
+    .pretty-link {
+      color: #8899a6;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+}

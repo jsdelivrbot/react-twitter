@@ -1,0 +1,26 @@
+.header {
+  .account-group {
+    color: #8899a6;
+    font-weight: normal;
+    text-decoration: none;
+
+    .avatar {
+      border: 0px;
+      border-radius: 5px;
+      float: left;
+      margin: 2px 0 0 -56px;
+      width: 48px;
+      height: 48px;
+    }
+
+    .fullname {
+      font-weight: bold;
+      color: #292f33;
+    }
+  }
+
+  .time a {
+    color: #8899a6;
+    text-decoration: none;
+  }
+}

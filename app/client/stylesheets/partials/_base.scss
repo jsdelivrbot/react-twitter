@@ -1,0 +1,26 @@
+body {
+    background: $bgColor;
+    color: $fontMainColor;
+    font-family: $baseFonts;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-bottom: 5em;
+}
+
+.alert-top {
+    background: $grey;
+    color: $black;
+    padding: 0.8em;
+    text-align: center;
+}
+
+.search-bar {
+    background: $red;
+    color: $white;
+    margin-bottom: 2em;
+    padding: 1em 0;
+}
+
+.content {
+    margin-left: 50px;
+}

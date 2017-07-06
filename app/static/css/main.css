@@ -1,0 +1,76 @@
+@import url("https://cdn.rawgit.com/twbs/bootstrap/48938155eb24b4ccdde09426066869504c6dab3c/dist/css/bootstrap.min.css");
+body {
+  background: #FAFAFA;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-bottom: 5em; }
+
+.alert-top {
+  background: #CCC;
+  color: #000;
+  padding: 0.8em;
+  text-align: center; }
+
+.search-bar {
+  background: #E35557;
+  color: #FFF;
+  margin-bottom: 2em;
+  padding: 1em 0; }
+
+.content {
+  margin-left: 50px; }
+
+.tweet {
+  background-color: #FFF;
+  border: 1px solid #E7E7E7;
+  border-radius: 0.7em;
+  line-height: 18px;
+  margin-bottom: 0.5rem;
+  min-height: 100px;
+  padding: 0.9em 1.2em; }
+  .tweet .header .account-group {
+    color: #8899a6;
+    font-weight: normal;
+    text-decoration: none; }
+    .tweet .header .account-group .avatar {
+      border: 0px;
+      border-radius: 5px;
+      float: left;
+      margin: 2px 0 0 -56px;
+      width: 48px;
+      height: 48px; }
+    .tweet .header .account-group .fullname {
+      font-weight: bold;
+      color: #292f33; }
+  .tweet .header .time a {
+    color: #8899a6;
+    text-decoration: none; }
+  .tweet .tweet-text {
+    font-size: 0.9em; }
+  .tweet .metadata {
+    margin: -3px 0 5px 26px; }
+    .tweet .metadata .retweet-img {
+      background: #77b255;
+      border-radius: 2px;
+      fill: #FFF;
+      vertical-align: middle;
+      width: 15px;
+      height: 14px; }
+    .tweet .metadata .retweet-text {
+      color: #8899a6;
+      font-size: 13px;
+      margin-left: 8px; }
+      .tweet .metadata .retweet-text .pretty-link {
+        color: #8899a6;
+        cursor: pointer;
+        text-decoration: none; }
+  .tweet .media-pictures .media-item {
+    width: 100%; }
+  .tweet .media-video .media-item {
+    width: 100%; }
+  .tweet .quote-text {
+    border: 1px solid #E7E7E7;
+    border-radius: 0.7em;
+    padding: 0.9em 1.2em 0; }
